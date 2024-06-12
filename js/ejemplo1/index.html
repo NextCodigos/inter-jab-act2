@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script src="index.js"></script> -->
+     <script>
+        let nombre="Jab";
+        let edad=18;
+        let actual=new Date().getFullYear();
+
+        let resultad3=`Mi nombre es ${nombre} y mi edad es ${edad} años.
+        Mi año de nacimiento es ${calcularNacimiento()}`;
+        function calcularNacimiento(){
+            return actual-edad;
+        }
+     </script>
+</body>
+</html>
