@@ -10,32 +10,27 @@
         }
         .colorRojo{
             color: red;
-            font-size: 3.3em;;
+            font-size: 3.3em;
         }
     </style>
 </head>
 <body>
-    <!-- <script src="index.js"></script> -->
-     <script>
+    <script>
         let nombre="Jab";
         let edad=18;
         let actual=new Date().getFullYear();
         let imagen="pantalon.jpg";
-
         let resultad3=`Mi nombre es <span class="colorRojo">${nombre}</span> 
         <div>
         <img src="img/${imagen}">
         </div>
         y mi edad es ${edad} años.
         Mi año de nacimiento es ${calcularNacimiento(edad)}`;
-
         console.log(resultad3);
         document.querySelector("body").innerHTML = resultad3;
-
-
         function calcularNacimiento(miEdad){
             return actual-miEdad;
         }
-     </script>
+    </script>
 </body>
 </html>
