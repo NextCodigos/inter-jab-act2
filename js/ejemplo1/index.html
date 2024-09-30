@@ -9,11 +9,23 @@
     <!-- <script src="index.js"></script> -->
      <script>
         let nombre="Beni";
+        let nombre2="Beni";
+        let nombre3="Beni";
         let edad=18;
+        let edad2=18;
+        let edad3=18;
+        let imagen = "pantalon.jpg";
+        let imagen2 = "pantalon.jpg";
+        let imagen3 = "pantalon.jpg";
         let actual=new Date().getFullYear();
 
         let resultad3=`Mi nombre es ${nombre} y mi edad es ${edad} años.
+         <img src="img/${imagen}">
         Mi año de nacimiento es ${calcularNacimiento()}`;
+        /**
+         * Calculates the year of birth based on the current year and the age.
+         * @returns {number} The year of birth.º
+         */
         function calcularNacimiento(){
             return actual-edad;
         }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 66%;
+      }
+      .colorRojo {
+        color: red;
+        font-size: 3.3em;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let nombre = "Beni";
+      let nombre2 = "Oleg";
+      let edad = 18;
+      let actual = new Date().getFullYear();
+      let imagen = "pantalon.jpg";
+      
+      // Función para calcular el año de nacimiento
+      function calcularNacimiento(miEdad) {
+        return actual - miEdad;
+      }
+
+      // Función para escribir HTML y reutilizar
+      function escribirHTML(nombre, edad, imagen, elemento) {
+        let resultado = `Mi nombre es <span class="colorRojo">${nombre}</span> 
+          <div>
+            <img src="img/${imagen}">
+          </div>
+          y mi edad es ${edad} años.
+          Mi año de nacimiento es ${calcularNacimiento(edad)}`;
+        
+        document.querySelector(elemento).innerHTML = resultado;
+      }
+
+      // Mostrar datos de 'nombre' y 'nombre2' en el HTML
+      escribirHTML(nombre, edad, imagen, "body"); // Para 'nombre'
+      escribirHTML(nombre2, 25, "camisa.jpg", "body"); // Para 'nombre2'
+    </script>
+  </body>
+</html>

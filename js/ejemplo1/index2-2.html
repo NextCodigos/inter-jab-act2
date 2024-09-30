@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 66%;
+      }
+      .colorRojo {
+        color: red;
+        font-size: 3.3em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content"></div> <!-- Contenedor para múltiples elementos -->
+    <script>
+      function imgNomnreFoto(nombre, imagen, edad) {
+        let actual = new Date().getFullYear();
+        let resultad3 = `
+          <div>
+            Mi nombre es <span class="colorRojo">${nombre}</span> 
+            <div>
+              <img src="img/${imagen}">
+            </div>
+            y mi edad es ${edad} años.
+            Mi año de nacimiento es ${calcularNacimiento(edad)}.
+          </div>
+          <hr />`; // Separador para cada entrada
+
+        console.log(resultad3);
+        // Agrega el resultado al contenedor en lugar de reemplazar todo el body
+        document.querySelector("#content").innerHTML += resultad3;
+      }
+
+      function calcularNacimiento(miEdad) {
+        return new Date().getFullYear() - miEdad;
+      }
+
+      // Llama a la función con diferentes nombres, imágenes y edades
+      imgNomnreFoto("Beni", "pantalon.jpg", 18);
+      imgNomnreFoto("Oleg", "pantalon2.jpg", 25);
+      imgNomnreFoto("Ana", "pantalon2.jpg", 22);
+    </script>
+  </body>
+</html>

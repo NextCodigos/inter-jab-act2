@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Datos de ejemplo
+        let nombres = ["Beni", "Oleg", "Ana"];
+        let edades = [18, 25, 22];
+        let imagenes = ["pantalon.jpg", "pantalon.jpg", "pantalon.jpg"];
+        let actual = new Date().getFullYear();
+        
+        // Variable para almacenar el resultado
+        let resultados = "";
+
+        // Bucle para crear el contenido
+        for (let i = 0; i < nombres.length; i++) {
+            resultados += `
+                <div>
+                    Mi nombre es <strong>${nombres[i]}</strong> y mi edad es ${edades[i]} años.
+                    <img src="img/${imagenes[i]}" alt="${nombres[i]}">
+                    Mi año de nacimiento es ${calcularNacimiento(edades[i])}.
+                </div>
+                <hr />`; // Separador visual
+        }
+
+        /**
+         * Calculates the year of birth based on the current year and the age.
+         * @param {number} edad - The age to calculate the year of birth.
+         * @returns {number} The year of birth.
+         */
+        function calcularNacimiento(edad) {
+            return actual - edad;
+        }
+
+        // Insertar los resultados en el body
+        document.body.innerHTML = resultados;
+
+    </script>
+</body>
+</html>

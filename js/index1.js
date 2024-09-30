@@ -1,5 +1,6 @@
 let usuario = "Jab"; // Se declara la variable `usuario` y se le asigna el valor "Jab".
-let productoComprado = 0; // Se declara la variable `productoComprado` y se le asigna el valor inicial 0.
+// let productoComprado = 0; // Se declara la variable `productoComprado` y se le asigna el valor inicial 0.
+let productoComprado = 1; // Se declara la variable `productoComprado` y se le asigna el valor inicial 0.
 const DESCUENTO = 0.1; // Se declara la constante `DESCUENTO` con el valor 0.1 (10%).
 let precioDescuento; // Se declara la variable `precioDescuento` para almacenar el precio con descuento.
 const PRODUCTOS = [

@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        img{
-            width: 66%;
-        }
-        .colorRojo{
-            color: red;
-            font-size: 3.3em;
-        }
+      img {
+        width: 66%;
+      }
+      .colorRojo {
+        color: red;
+        font-size: 3.3em;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        let nombre="Jab";
-        let edad=18;
-        let actual=new Date().getFullYear();
-        let imagen="pantalon.jpg";
-        let resultad3=`Mi nombre es <span class="colorRojo">${nombre}</span> 
+      function imgNomnreFoto(){
+
+        let nombre = "Beni";
+        let nombre2 = "Oleg";
+      let edad = 18;
+      let actual = new Date().getFullYear();
+      let imagen = "pantalon.jpg";
+      let resultad3 = `Mi nombre es <span class="colorRojo">${nombre}</span> 
         <div>
         <img src="img/${imagen}">
         </div>
         y mi edad es ${edad} años.
         Mi año de nacimiento es ${calcularNacimiento(edad)}`;
-        console.log(resultad3);
-        document.querySelector("body").innerHTML = resultad3;
-        function calcularNacimiento(miEdad){
-            return actual-miEdad;
-        }
-    </script>
-</body>
-</html>
+      console.log(resultad3);
+      document.querySelector("body").innerHTML = resultad3;
+      function calcularNacimiento(miEdad) {
+        return actual - miEdad;
+      }
+    }
+    imgNomnreFoto();
+      </script>
+  </body>
+  </html>

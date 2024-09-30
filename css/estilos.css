@@ -1,10 +1,10 @@
 div{
   font-size:1.5em;
 }
-section img{
+/* section img{
   width:75%;
   width:100%;
-}
+} */
 section{
   border:1px solid gray;
   padding:20px;
@@ -13,4 +13,7 @@ section {
   border: 1px solid gray;
   padding: 20px;
   overflow: hidden;
+}
+#productoImagen{
+  width: 50%;
 }
