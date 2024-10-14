@@ -17,7 +17,7 @@
         let resultados = "";
 
         // Bucle for...of para crear el contenido
-        for (let i = 0; i < nombres.length; i++) {
+        for (let i in nombres){
             resultados += `
                 <div>
                     Mi nombre es <strong>${nombres[i]}</strong> y mi edad es ${edades[i]} años.

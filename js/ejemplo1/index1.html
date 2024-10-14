@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Datos de ejemplo
+        let nombres = ["Beni", "Oleg", "Ana"];
+        let edades = [18, 25, 22];
+        let imagenes = ["pantalon.jpg", "pantalon.jpg", "pantalon.jpg"];
+        let actual = new Date().getFullYear();
+        
+        // Variable para almacenar el índice actual de la imagen
+        let indiceActual = 0;
+
+        // Función para calcular el año de nacimiento
+        function calcularNacimiento(edad) {
+            return actual - edad;
+        }
+
+        // Función para mostrar los datos y la imagen actual
+        function mostrarDatos() {
+            // Crear el contenido con el nombre, edad, imagen y año de nacimiento
+            let resultados = `
+                <div>
+                    Mi nombre es <strong>${nombres[indiceActual]}</strong> y mi edad es ${edades[indiceActual]} años.
+                    <img src="img/${imagenes[indiceActual]}" alt="${nombres[indiceActual]}">
+                    Mi año de nacimiento es ${calcularNacimiento(edades[indiceActual])}.
+                </div>
+                <hr />`; // Separador visual
+
+            // Insertar los resultados en el body
+            document.body.innerHTML = resultados;
+        }
+
+        // Función para cambiar a la siguiente imagen al hacer clic
+        function cambiarImagen() {
+            indiceActual = (indiceActual + 1) % nombres.length; // Cicla los índices
+            mostrarDatos(); // Actualiza el contenido
+        }
+
+        // Mostrar los datos iniciales
+        mostrarDatos();
+
+        // Añadir un evento de clic al body para cambiar la imagen
+        document.body.addEventListener("click", cambiarImagen);
+
+    </script>
+</body>
+</html>

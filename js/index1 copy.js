@@ -59,10 +59,61 @@ function actualizarHTML() {
 
   // Agregar evento click a la imagen para cambiar de producto.
   document.getElementById("productoImagen").addEventListener("click", () => {
-    productoComprado = (productoComprado + 1) % PRODUCTOS.length; // Cambiar al siguiente producto.
+    productoComprado = productoComprado ? 0 : 1; // Cambiar al siguiente producto utilizando ternario.
     actualizarHTML(); // Actualizar el contenido HTML.
   });
 }
+
+
+/*
+  Función para actualizar el contenido HTML basado en el producto seleccionado.
+*/
+// function actualizarHTML() {
+//   document.querySelector("body").innerHTML = `
+//     <h1>${usuario}</h1> 
+//     <section class="caja"> 
+//       <div>
+//         ${PRODUCTOS[productoComprado].producto} (${
+//     PRODUCTOS[productoComprado].precio
+//   } €) 
+//       </div>
+//       <div>Descuento: ${calcularDescuento()} € </div>
+//       <div>
+//         <strong>Precio final: ${calcularPrecio()} € </strong>
+//       </div>
+//       <div>Talla: ${PRODUCTOS[productoComprado].talla.toUpperCase()} </div>
+//       <img id="productoImagen" src="img/${
+//         PRODUCTOS[productoComprado].imagen
+//       }" alt="${PRODUCTOS[productoComprado].producto}">
+//     </section>
+//   `;
+// }
+
+
+// Agregar evento click a la imagen para cambiar de producto.
+//   document.getElementById("productoImagen").addEventListener("click", () => {
+//     productoComprado = (productoComprado + 1) % PRODUCTOS.length; // Cambiar al siguiente producto.
+//     actualizarHTML(); // Actualizar el contenido HTML.
+//   });
+// }
+
+// Agregar evento click a la imagen para cambiar de producto.
+// document.getElementById("productoImagen").addEventListener("click", () => {
+//   productoComprado = !productoComprado; // Cambiar al siguiente producto.
+//   if (productoComprado) {
+//     productoComprado = 1; // Si es true, selecciona el segundo producto.
+//   } else {
+//     productoComprado = 0; // Si es false, selecciona el primer producto.
+//   }
+//   actualizarHTML(); // Actualizar el contenido HTML.
+// });
+
+// Ternario
+// Agregar evento click a la imagen para cambiar de producto.
+// document.getElementById("productoImagen").addEventListener("click", () => {
+//   productoComprado = productoComprado ? 0 : 1; // Cambiar al siguiente producto utilizando ternario.
+//   actualizarHTML(); // Actualizar el contenido HTML.
+// });
 
 // Inicializar la página con el primer producto.
 actualizarHTML();
