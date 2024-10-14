@@ -22,8 +22,8 @@
         let resultad3 = `
           <div>
             Mi nombre es <span class="colorRojo">${nombre}</span> 
+            <img src="img/${imagen}">
             <div>
-              <img src="img/${imagen}">
             </div>
             y mi edad es ${edad} años.
             Mi año de nacimiento es ${calcularNacimiento(edad)}.
@@ -31,7 +31,7 @@
           <hr />`; // Separador para cada entrada
 
         console.log(resultad3);
-        // Agrega el resultado al contenedor en lugar de reemplazar todo el body
+        // Agrega el resultado al contenedor
         document.querySelector("#content").innerHTML += resultad3;
       }
 
